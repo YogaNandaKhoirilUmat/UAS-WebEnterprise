@@ -1,0 +1,249 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #f8f9fa; /* Background warna terang */
+    color: #333; /* Warna teks default */
+}
+
+/* Sidebar Style */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50; /* Warna latar sidebar */
+    color: white;
+    padding: 20px; /* Padding untuk memberi ruang nyaman */
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Menu berada di atas */
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px; /* Jarak judul dengan menu */
+    font-size: 22px;
+    font-weight: bold;
+    color: #ecf0f1;
+    letter-spacing: 1px; /* Spasi antar huruf */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0; /* Jarak antar menu */
+}
+
+.sidebar ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px; /* Menambah ruang klik pada menu */
+    border-radius: 5px; /* Membuat sudut membulat */
+    transition: all 0.3s ease; /* Transisi hover yang halus */
+}
+
+/* Menu Hover Effect */
+.sidebar ul li a:hover {
+    background-color: #4a69bd; /* Warna saat hover (biru lembut) */
+    color: #ecf0f1; /* Warna teks terang saat hover */
+    padding-left: 20px; /* Animasi pergeseran ke kanan */
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Logout Button Hover Effect */
+.sidebar ul li.logout .logout-button:hover {
+    background-color: #c0392b; /* Warna merah gelap saat hover */
+    color: white; /* Warna teks tetap putih */
+    padding-left: 20px; /* Animasi pergeseran ke kanan */
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+
+/* Logout Button Styling */
+.sidebar ul li.logout {
+    margin-top: auto; /* Pastikan logout berada di bawah */
+}
+
+.sidebar ul li.logout .logout-button {
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px; /* Sama dengan menu lainnya */
+    border-radius: 5px; /* Sama seperti menu lainnya */
+    background-color: #e74c3c; /* Warna merah */
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li.logout .logout-button:hover {
+    background-color: #c0392b; /* Warna merah gelap saat hover */
+    padding-left: 20px; /* Animasi pergeseran saat hover */
+}
+
+
+
+.logout-form {
+    margin: 0;
+}
+
+.logout-button {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #e74c3c; /* Logout button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+    background-color: #c0392b;
+    transform: translateX(5px);
+}
+
+.logout-button i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 270px; /* Ruang untuk sidebar */
+    padding: 20px;
+    width: calc(100% - 270px); /* Lebar responsif */
+}
+
+/* Header Style */
+header {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+header p {
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+}
+
+/* Cards Container */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 23%; /* Lebar kartu */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-top: 5px;
+}
+
+/* Alerts */
+.alert {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #e7f3ff;
+    color: #004085;
+    border: 1px solid #b8daff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Chart Section */
+#chart {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#chart h2 {
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    text-align: center;
+    color: #777;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
